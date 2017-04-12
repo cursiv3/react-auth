@@ -4,7 +4,6 @@ import { BrowserRouter, Route, Link } from 'react-router-dom';
 import injectTapEventPlugin from 'react-tap-event-plugin';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
-import Base from './components/Base';
 import HomePage from './components/HomePage';
 import LoginPage from './containers/LoginPage';
 import SignUpPage from './containers/SignUpPage';
@@ -16,11 +15,11 @@ ReactDOM.render(
   <MuiThemeProvider muiTheme={getMuiTheme()}>
     <BrowserRouter>
       <div>
-        <ul>
-          <li><Link to="/">Home</Link></li>
-          <li><Link to="/login">Login</Link></li>
-          <li><Link to="/signup">SignUp</Link></li>
-        </ul>
+        <div className="top-bar">
+          <p className="top-bar-left"><Link to="/">React App</Link></p>
+          <p className="top-bar-right"><Link to="/login">Login</Link></p>
+          <p className="top-bar-right"><Link to="/signup">Sign Up</Link></p>
+        </div>
 
         <hr />
 

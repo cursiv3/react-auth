@@ -5,7 +5,7 @@ import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
 const HomePage = () => (
     <MuiThemeProvider>
         <Card className="container">
-            <CardTitle title="React Application" subtitle="This is the home page." />
+            <CardTitle title="Sample React Authentication" subtitle="This is the where the home page would be." />
         </Card>
     </MuiThemeProvider>
 )

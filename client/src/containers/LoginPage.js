@@ -1,4 +1,5 @@
-import React, { PropTypes } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types'
 import LoginForm from '../components/LoginForm';
 
 class LoginPage extends React.Component {
@@ -18,7 +19,6 @@ class LoginPage extends React.Component {
   }
 
   processForm(event) {
-    // prevent default action. in this case, action is the form submission event
     event.preventDefault();
 
     console.log('email:', this.state.user.email);
@@ -36,7 +36,6 @@ class LoginPage extends React.Component {
   }
 
   render() {
-    console.log('this', this);
 
     return (
       <LoginForm

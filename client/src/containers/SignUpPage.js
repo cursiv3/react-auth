@@ -1,4 +1,5 @@
-import React, { PropTypes, Component } from 'react';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types'
 import SignUpForm from '../components/SignUpForm';
 
 class SignUpPage extends Component {
