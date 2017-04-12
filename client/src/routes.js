@@ -1,13 +1,11 @@
 import Base from './components/Base.jsx';
-import HomePage from './components/HomePage.jsx';
-import LoginPage from './containers/LoginPage.jsx';
-import SignUpPage from './containers/SignUpPage.jsx';
-
+import HomePage from './components/HomePage';
+import LoginPage from './containers/LoginPage';
+import SignUpPage from './containers/SignUpPage';
 
 const routes = {
   component: Base,
   childRoutes: [
-
     {
       path: '/',
       component: HomePage
@@ -22,7 +20,6 @@ const routes = {
       path: '/signup',
       component: SignUpPage
     }
-
   ]
 };
 

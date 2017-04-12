@@ -1,31 +1,27 @@
-import React, { PropTypes } from 'react';
-import { Link } from 'react-router';
+import React from 'react';
+import {PropTypes} from 'prop-types'
+import { Link } from 'react-router-dom';
 import { Card, CardText } from 'material-ui/Card';
 import RaisedButton from 'material-ui/RaisedButton';
 import TextField from 'material-ui/TextField';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
 
 
-const LoginForm = ({
-  onSubmit,
-  onChange,
-  errors,
-  user
-}) => (
+const LoginForm = (props) => (
     <MuiThemeProvider>
         <Card className="container">
-            <form action="/" onSubmit={onSubmit}>
+            <form action="/" onSubmit={this.props.onSubmit}>
             <h2 className="card-heading">Login</h2>
 
-            {errors.summary && <p className="error-message">{errors.summary}</p>}
+            {this.props.errors.summary && <p className="error-message">{this.props.errors.summary}</p>}
 
             <div className="field-line">
                 <TextField
                 floatingLabelText="Email"
                 name="email"
-                errorText={errors.email}
-                onChange={onChange}
-                value={user.email}
+                errorText={this.props.errors.email}
+                onChange={this.props.onChange}
+                value={this.props.user.email}
                 />
             </div>
 
@@ -34,9 +30,9 @@ const LoginForm = ({
                 floatingLabelText="Password"
                 type="password"
                 name="password"
-                onChange={onChange}
-                errorText={errors.password}
-                value={user.password}
+                onChange={this.props.onChange}
+                errorText={this.props.errors.password}
+                value={this.props.user.password}
                 />
             </div>
 
