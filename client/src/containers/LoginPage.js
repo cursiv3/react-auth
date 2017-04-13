@@ -33,11 +33,9 @@ class LoginPage extends React.Component {
     xhr.responseType = 'json';
     xhr.addEventListener('load', () => {
       if (xhr.status === 200) {
-
         this.setState({
           errors: {}
         });
-
         console.log('The form is valid');
       } else {
 
@@ -72,7 +70,6 @@ class LoginPage extends React.Component {
       />
     );
   }
-
 }
 
 export default LoginPage;

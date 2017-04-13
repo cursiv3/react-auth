@@ -14276,11 +14276,9 @@ var LoginPage = function (_React$Component) {
       xhr.responseType = 'json';
       xhr.addEventListener('load', function () {
         if (xhr.status === 200) {
-
           _this2.setState({
             errors: {}
           });
-
           console.log('The form is valid');
         } else {
 
@@ -14758,7 +14756,7 @@ var _propTypes = __webpack_require__(16);
 
 var _propTypes2 = _interopRequireDefault(_propTypes);
 
-var _reactRouter = __webpack_require__(19);
+var _reactRouterDom = __webpack_require__(184);
 
 var _Card = __webpack_require__(90);
 
